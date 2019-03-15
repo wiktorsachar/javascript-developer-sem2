@@ -9,7 +9,7 @@ const createData = (numberOfUserTries, rangeOfNumbers) => {
     let secretNumber = Math.floor(Math.random() * (rangeOfNumbers + 1));
     let newGame = [secretNumber, numberOfUserTries, rangeOfNumbers, []]; // it's a structure of data, last element of this array is an array of used user's input numbers
     try {
-        let continueGuessing = JSON.parse(fs.readFileSync('./JAVASCRIPT2-1_homework2_data.json'));
+        let continueGuessing = JSON.parse(fs.readFileSync('./secretNumberData.json'));
         if (continueGuessing[1] === 0 || continueGuessing[1] === 'win') { // if number of left user tries equals 0 or user has won a game, the data is reseted
             return newGame;
         } else {
@@ -48,14 +48,14 @@ const guessNumber = (usersInput, dataInput) => {
     };
 
     if (dataInput[1] === 0) {
-        console.log('You loose!');
+        console.log(`You loose! The Secret Number was ${dataInput[0]}.`);
     } else if (dataInput[1] === 'win') {
         console.log('Congratulations!');
     } else {
         console.log(`You've got ${dataInput[1]} more tries left!`);
     };
 
-    fs.writeFileSync('./JAVASCRIPT2-1_homework2_data.json', JSON.stringify(dataInput));
+    fs.writeFileSync('./secretNumberData.json', JSON.stringify(dataInput));
     
 };
 
