@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+  <title>Pig Latin translator!</title>
+  <link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+  <div>
+    <table class="header">
+      <tr>
+        <td class="logo"><h1>Pig Latin translator</h1></td>
+        <td>
+          <img src="piggy.png" alt="piggy logo" width="40%" height="40%" />
+        </td>
+      </tr>
+    </table>
+
+    <h3>Text to translate:</h3>
+    <h3>
+      <input type="text" id="pig-latin" />
+    </h3>
+    <div>
+      <label>
+        <input
+          type="radio"
+          id="english-to-latin"
+          name="translator-choice"
+          onclick="translationChanger1()"
+        />
+        English to Pig Latin</label
+      >
+      <label
+        ><input
+          type="radio"
+          id="latin-to-english"
+          name="translator-choice"
+          onclick="translationChanger2()"
+        />
+        Pig Latin to English</label
+      >
+    </div>
+    <div>
+      <br />
+      <button onclick="textChanger();router()">
+        Translate this to me, cowboy!
+      </button>
+    </div>
+
+    <br />
+  </div>
+  <div class="translated-text">
+    <script src="pigLatinTranslator.js"></script>
+    <div id="text-translated">
+      <br />
+    </div>
+  </div>
+</body>
+<footer>
+  <div class="foot">
+    <p>
+      Pig Latin Translator © 2019 <br />
+      Wicia
+    </p>
+  </div>
+</footer>
