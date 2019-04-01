@@ -1,7 +1,8 @@
 /* Given two strings, write a program that efficiently finds the longest common subsequence. ‘karol rolki’*/
 
-const example1 = 'bogurodzidzica';
-const example2 = 'urodzilas';
+//do poprawy
+const example1 = 'karol';
+const example2 = 'rolki';
 
 const splitter = (string1, string2) => {
     let first = string1.split('');
@@ -62,7 +63,6 @@ const commonSubstrings = (arrays) => {
         };
     };
     for (let i = 0; i < first.length; i++) {
-        //if (second.includes(first[i]))
         if (condition(second, first[i])) {
             commonSubstrings.push(first[i]);
         };
@@ -84,11 +84,6 @@ const compareSubstrings = (array) => {
     };
     return longest;
 };
-
-
-
-
-
 
 let a = splitter(example1, example2);
 let b = uniqueSubstrings(a);
