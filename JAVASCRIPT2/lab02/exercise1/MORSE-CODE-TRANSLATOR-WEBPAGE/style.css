@@ -1,0 +1,19 @@
+* {
+    margin: 3px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.button {
+    background-color: #6cbb70;
+    border: 1px solid;
+    border-color: #468b49;
+    font-weight: 650;
+    color: white;
+}
+.text {
+    text-align: left;
+}
+h1 {
+    color: #468b49;
+}
