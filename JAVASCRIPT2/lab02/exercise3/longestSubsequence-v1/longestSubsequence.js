@@ -1,6 +1,6 @@
 /* Given two strings, write a program that efficiently finds the longest common subsequence. ‘karol rolki’*/
 
-//do poprawy
+//inaccurate and wrong version, check versions from v2 to above
 const example1 = 'karol';
 const example2 = 'rolki';
 
