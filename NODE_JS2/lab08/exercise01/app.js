@@ -8,8 +8,8 @@ gdzie 19 to podatek, a 25 to kwota
 w rezultacie: { "tax": 5, "amount": 20 }*/
 
 const getTax = (taxPercent, amount) => {
-  let taxAmount = (taxPercent / 100) * amount;
-  let withoutTaxAmount = amount - taxAmount;
+  const taxAmount = (taxPercent / 100) * amount;
+  const withoutTaxAmount = amount - taxAmount;
   return {
     tax: Math.round(taxAmount),
     amount: Math.round(withoutTaxAmount)
